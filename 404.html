@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uhh do what now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Sniglet:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/light/favicon-196x196.png"
+      sizes="196x196"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/light/favicon-128x128.png"
+      sizes="128x128"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/light/favicon-96x96.png"
+      sizes="96x96"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/light/favicon-32x32.png"
+      sizes="32x32"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/light/favicon-16x16.png"
+      sizes="16x16"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/dark/favicon-196x196.png"
+      sizes="196x196"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/dark/favicon-128x128.png"
+      sizes="128x128"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/dark/favicon-96x96.png"
+      sizes="96x96"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/dark/favicon-32x32.png"
+      sizes="32x32"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://mrh.is/favicon/dark/favicon-16x16.png"
+      sizes="16x16"
+      media="(prefers-color-scheme: dark)"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        --color-light-text: #222;
+        --color-light-background: #fff;
+        --color-dark-text: #ddd;
+        --color-dark-background: #181818;
+        --color-light-link: #0066cc;
+        --color-dark-link: #66b3ff;
+
+        --background-color: var(--color-light-background);
+        --text-color: var(--color-light-text);
+        --link-color: var(--color-light-link);
+
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.5;
+
+        font-family: Inter, sans-serif;
+        font-feature-settings: "liga" 1, "calt" 1;
+
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .emoji {
+        font-size: 6rem;
+        margin-bottom: 2rem;
+        display: block;
+      }
+
+      h1 {
+        font-family: Sniglet, Inter, sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+      }
+
+      p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+        opacity: 0.8;
+      }
+
+      .main-message {
+        margin-bottom: 1rem;
+      }
+
+      .secondary-message {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+      }
+
+      .link-message {
+        font-size: 1.25rem;
+        opacity: 0.6;
+        margin-top: 4rem;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration-color: transparent;
+        transition: color 0.1s ease-in-out,
+          text-decoration-color 0.1s ease-in-out;
+      }
+
+      a:hover {
+        text-decoration-color: currentColor;
+      }
+
+      .shortlink {
+        font-family: ui-monospace, "SF Mono", Monaco, "Cascadia Code",
+          "Roboto Mono", Consolas, "Courier New", monospace;
+        background-color: var(--text-color);
+        color: var(--background-color);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.9em;
+        font-weight: 400;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          --background-color: var(--color-dark-background);
+          --text-color: var(--color-dark-text);
+          --link-color: var(--color-dark-link);
+        }
+      }
+
+      @media (max-width: 800px) {
+        h1 {
+          font-size: 3rem;
+        }
+
+        body {
+          font-size: 1.25rem;
+        }
+
+        .emoji {
+          font-size: 4rem;
+        }
+
+        .link-message {
+          font-size: 1.125rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="emoji">🧐</span>
+      <h1>Hmm…</h1>
+      <p class="main-message">
+        There doesn't seem to be a short link for
+        <span class="shortlink" id="shortlink-display"></span>.
+      </p>
+      <p class="secondary-message">
+        Check the spelling? Or ask Michael to fix it.
+      </p>
+      <p class="link-message">
+        In the meantime, you're welcome to look at
+        <a href="https://mrh.is">my beautiful main site</a>.
+      </p>
+    </div>
+
+    <script>
+      // Extract just the short code from the current URL
+      const params = new URLSearchParams(window.location.search);
+      const path = params.get("p");
+      const shortlinkElement = document.getElementById("shortlink-display");
+
+      if (path && path !== "/") {
+        // Remove leading slash and file extensions
+        const shortCode = path.replace(/\.(html|htm)$/i, ""); // Remove .html or .htm
+        shortlinkElement.textContent = shortCode;
+      } else {
+        // Fallback text if no path
+        shortlinkElement.textContent = "whatever you tried to access";
+      }
+    </script>
+  </body>
+</html>

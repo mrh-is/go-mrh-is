@@ -1,0 +1,28 @@
+app = 'go-mrh-is'
+primary_region = 'iad'
+
+[build]
+
+[env]
+DEFAULT_DOMAIN = "go.mrh.is"
+IS_HTTPS_ENABLED = "true"
+DB_DRIVER = "sqlite"
+DB_NAME = "/etc/shlink/data/database.sqlite"
+DEFAULT_INVALID_SHORT_URL_REDIRECT = "https://go.mrh.is/404.html?p={ORIGINAL_PATH}"
+DEFAULT_BASE_URL_REDIRECT = "https://mrh.is"
+
+[http_service]
+internal_port = 8080
+force_https = true
+auto_stop_machines = 'off'
+auto_start_machines = true
+min_machines_running = 0
+
+[[vm]]
+cpu_kind = "shared"
+cpus = 1
+memory_mb = 256
+
+[[mounts]]
+source = "shlink_data"
+destination = "/etc/shlink/data"
